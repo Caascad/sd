@@ -1,0 +1,14 @@
+[
+  {
+    "AttributeName": "id",
+    "AttributeType": "S"
+  },
+  {
+    "AttributeName": "object_type",
+    "AttributeType": "S"
+  },
+  {
+    "AttributeName": "tags",
+    "AttributeType": "L"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "service_discovery_test_infra-stg": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": {"S": "c99f1720-1cda-484c-9d15-2b061ca1d783"},
+          "object_type": {"S": "loadbalancer"},
+          "tags": {
+            "L": [
+              {"S": "tag1"},
+              {"S": "tag2"}
+            ]
+          },
+          "zone": {"S": "myzone"},
+          "uuid": {
+            "S": "29d05e1b-b74a-4baf-b4c0-5955f2f7b315"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
