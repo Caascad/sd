@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     version = "1.0.0";
     unpackPhase = "true";
     src="./src";
-    buildInputs = [
+    propagatedBuildInputs = [
       tbox.vault
       curl
       jq
