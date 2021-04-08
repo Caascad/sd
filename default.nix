@@ -10,15 +10,16 @@ with pkgs.lib;
 
 stdenv.mkDerivation rec {
     pname = "discovery";
-    version = "1.0.0";
+    version = "1.0.1";
     unpackPhase = "true";
     src="./src";
-    buildInputs = [
+    propagatedBuildInputs = [
       tbox.vault
       curl
       jq
       tbox.cue
       stdenv
+      awscli
     ];
     installPhase = ''
       install -m755 -D ${./src/bin/sd.sh} $out/bin/sd
