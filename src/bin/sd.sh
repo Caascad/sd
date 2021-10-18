@@ -132,7 +132,7 @@ build_vault_addr () {
   }
 
 pull_caascad_zone () {
-  curl -s -o "${CAASCAD_ZONES_LOCAL}" "${CAASCAD_ZONES_URL}"
+  curl -k -s -o "${CAASCAD_ZONES_LOCAL}" "${CAASCAD_ZONES_URL}"
   }
 
 pull_sd () {

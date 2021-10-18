@@ -10,7 +10,7 @@ with pkgs.lib;
 
 stdenv.mkDerivation rec {
     pname = "discovery";
-    version = "1.0.1";
+    version = "1.0.2";
     unpackPhase = "true";
     src="./src";
     propagatedBuildInputs = [
@@ -19,6 +19,7 @@ stdenv.mkDerivation rec {
       jq
       tbox.cue
       stdenv
+      awscli
     ];
     installPhase = ''
       install -m755 -D ${./src/bin/sd.sh} $out/bin/sd
