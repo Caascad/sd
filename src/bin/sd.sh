@@ -6,7 +6,7 @@ SD_DEBUG=${SD_DEBUG:-0}
 SD_TRACE=${SD_TRACE:-0}
 if [ "$SD_TRACE" -eq 1 ]; then set -x; fi
 
-CAASCAD_ZONES_URL=https://git.corp.cloudwatt.com/caascad/caascad-zones/raw/master/zones.json
+CAASCAD_ZONES_URL=https://git.corp.caascad.com/caascad/caascad-zones/raw/master/zones.json
 RUN_DIR="/run/user/$(id -u)/caascad-sd"
 SHARE_DIR="${SHARE_DIR:-./src/share}"
 INFRA_ZONE_NAME="${INFRA_ZONE_NAME:-infra-stg}"
