@@ -10,7 +10,7 @@ with pkgs.lib;
 
 stdenv.mkDerivation rec {
     pname = "discovery";
-    version = "1.0.2";
+    version = "1.0.3";
     unpackPhase = "true";
     src="./src";
     propagatedBuildInputs = [
