@@ -6,7 +6,7 @@ SD_DEBUG=${SD_DEBUG:-0}
 SD_TRACE=${SD_TRACE:-0}
 if [ "$SD_TRACE" -eq 1 ]; then set -x; fi
 
-CAASCAD_ZONES_URL=https://git.corp.caascad.com/caascad/caascad-zones/raw/master/zones.json
+CAASCAD_ZONES_URL=https://git.corp.caascad.com/terraform/envs-ng/raw/gen/zones_static/zones.json
 RUN_DIR="/run/user/$(id -u)/caascad-sd"
 SHARE_DIR="${SHARE_DIR:-./src/share}"
 INFRA_ZONE_NAME="${INFRA_ZONE_NAME:-infra-stg}"
@@ -61,12 +61,12 @@ dotest () {
   VAULT_ADDR=$(build_vault_addr "${INFRA_ZONE_NAME}")
   log_debug "vault addr: ${VAULT_ADDR}"
   get_aksk "${STS_ENDPOINT}" "${VAULT_ADDR}"
-  
+
   # first let's clean
   log_info "cleaning old test artefacts"
   drop_table "${DYNAMODB_TABLE_NAME}" &>/dev/null || true
   rm "${CAASCAD_SD_LOCAL}" "${CAASCAD_ZONES_LOCAL}" &>/dev/null || true
-  
+
   # now we process the whole test
   create_table "${DYNAMODB_TABLE_NAME}"
   populate_table "${DYNAMODB_TABLE_NAME}" "${DATA_TEST}"

@@ -1,4 +1,4 @@
-let 
+let
   sources = import ./nix/sources.nix;
   toolboxSrc = sources.toolbox;
   toolbox = import toolboxSrc {};
