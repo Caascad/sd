@@ -9,7 +9,7 @@ let
 
 in pkgs.stdenv.mkDerivation rec {
   pname = "discovery";
-  version = "1.0.5";
+  version = "1.0.6";
 
   unpackPhase = "true";
   buildInputs = [ pkgs.makeWrapper ];
