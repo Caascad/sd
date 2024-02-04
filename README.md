@@ -1,3 +1,6 @@
+!!! DEPRECATED
+    moved to the toolbox repository
+
 Caascad Registry
 ================
 The registry is the object where we store runtime values necessary for service discovery purposes.
